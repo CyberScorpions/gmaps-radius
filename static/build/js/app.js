@@ -103,7 +103,6 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
       return this.setMap(null);
     };
     clearMarkers = function() {
-      console.log('markers1',markers);
       var i, len, m;
       for (i = 0, len = markers.length; i < len; i++) {
         m = markers[i];
@@ -130,7 +129,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
         strokeOpacity: 0.62,
         strokeWeight: 1
       });
-      mark.push([e.latLng.lat,e.latLng.lng,radius])
+      mark.push([e.latLng.lat(),e.latLng.lng(),radius,e.latLng])
       google.maps.event.addListener(circle, 'rightclick', polygonDestructionHandler);
       console.log('markers2',mark);
       return google.maps.event.addListener(circle, 'click', circleDrawHandler);
@@ -162,7 +161,6 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
           title: location.name,
           clickable: false
         }));
-      console.log('markers3!:',markers);
       }
     });
     updateURL = function() {
