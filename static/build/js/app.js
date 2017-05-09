@@ -127,6 +127,8 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
         strokeWeight: 1
       });
       google.maps.event.addListener(circle, 'rightclick', polygonDestructionHandler);
+      alert(circle)
+      console.log(markers)
       return google.maps.event.addListener(circle, 'click', circleDrawHandler);
     };
     google.maps.event.addListener(map, 'click', circleDrawHandler);
