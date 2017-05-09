@@ -133,7 +133,6 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
       mark.push([e.latLng.lat(),e.latLng.lng(),radius])
       google.maps.event.addListener(circle, 'rightclick', polygonDestructionHandler);
       console.log(mark);
-      copy(JSON.stringify(mark))
       return google.maps.event.addListener(circle, 'click', circleDrawHandler);
     };
     google.maps.event.addListener(map, 'click', circleDrawHandler);
