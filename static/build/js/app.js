@@ -99,6 +99,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
       fr: 31705.3408
     };
     polygonDestructionHandler = function() {
+      console.log('self',self);
       return this.setMap(null);
     };
     clearMarkers = function() {
@@ -129,7 +130,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
         strokeOpacity: 0.62,
         strokeWeight: 1
       });
-      mark.push(e.latLng)
+      mark.push([e.latLng.lat,e.latLng.lng,radius])
       google.maps.event.addListener(circle, 'rightclick', polygonDestructionHandler);
       console.log('markers2',mark);
       return google.maps.event.addListener(circle, 'click', circleDrawHandler);
