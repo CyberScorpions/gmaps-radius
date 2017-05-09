@@ -101,6 +101,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
       return this.setMap(null);
     };
     clearMarkers = function() {
+      console.log('markers1',markers);
       var i, len, m;
       for (i = 0, len = markers.length; i < len; i++) {
         m = markers[i];
@@ -128,6 +129,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
         strokeWeight: 1
       });
       google.maps.event.addListener(circle, 'rightclick', polygonDestructionHandler);
+      console.log('markers2',markers);
       return google.maps.event.addListener(circle, 'click', circleDrawHandler);
     };
     google.maps.event.addListener(map, 'click', circleDrawHandler);
@@ -157,6 +159,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
           title: location.name,
           clickable: false
         }));
+      console.log('markers3!:',markers);
       }
     });
     updateURL = function() {
