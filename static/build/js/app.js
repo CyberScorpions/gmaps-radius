@@ -99,7 +99,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
       fr: 31705.3408
     };
     polygonDestructionHandler = function() {
-      console.log('self',self);
+      mark.pop()
       return this.setMap(null);
     };
     clearMarkers = function() {
