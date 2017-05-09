@@ -68,6 +68,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
   $(function() {
     var circleDrawHandler, clearMarkers, earthRadii, map, markers, polygonDestructionHandler, searchBox, searchInput, updateURL;
     markers = [];
+    console.log(markers)
     map = new google.maps.Map($('#map')[0], {
       zoom: 10,
       center: new google.maps.LatLng(51.500358, -0.125506),
@@ -127,8 +128,6 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
         strokeWeight: 1
       });
       google.maps.event.addListener(circle, 'rightclick', polygonDestructionHandler);
-      alert(circle)
-      console.log(markers)
       return google.maps.event.addListener(circle, 'click', circleDrawHandler);
     };
     google.maps.event.addListener(map, 'click', circleDrawHandler);
